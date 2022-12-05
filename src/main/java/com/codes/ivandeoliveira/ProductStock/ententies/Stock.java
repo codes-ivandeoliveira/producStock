@@ -14,7 +14,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_product")
+@Table(name = "tb_Stock")
 public class Stock implements Serializable {
 
 	
@@ -26,7 +26,7 @@ public class Stock implements Serializable {
 	private String name;
 	private String adress;
 	
-	@OneToMany(mappedBy = "produto", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "stock", cascade = CascadeType.ALL)
 	
 	private Set <Product> product = new HashSet<>(); 
 	
